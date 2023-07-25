@@ -1,0 +1,31 @@
+.NotesField {
+  width: 70%;
+  height: 70%;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  bottom: -60px;
+  height: 40px;
+  width: 120px;
+  border: 0;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(25, 161, 43);
+  border-radius: 5px;
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}

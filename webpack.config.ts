@@ -59,13 +59,17 @@ export default (env: BuildDev) => {
       ],
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js', 'jsx'],
+      extensions: ['.tsx', '.ts', '.js', '.jsx'],
+      preferAbsolute: true,
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev
       ? {
           port: port,
           open: true,
+          hot: true,
+          historyApiFallback: true,
         }
       : undefined,
   };

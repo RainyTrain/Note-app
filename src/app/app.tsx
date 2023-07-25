@@ -1,17 +1,16 @@
-import { useState } from 'react';
-import cls from './app.module.scss';
+import { Navbar } from 'widgets/ui/Navbar/ui/Navbar';
+import { classNames } from '../shared/lib/classNames/classNames';
+import { useTheme } from '../widgets/ui/ThemeProvider/lib/useTheme';
+import { AppRoutes } from './providers/routes/ui/AppRoutes';
 
 export const App = () => {
-  const [count, setCount] = useState<number>(0);
-  const [input, setInput] = useState<string>('');
-
+  const { theme } = useTheme();
   return (
-    <div className="app">
-      <h1 className={cls.test}>HELLO</h1>
-      <div className="div">yo</div>
-      {count}
-      <button onClick={() => setCount((prev) => prev + 1)}>Add</button>
-      <input value={input} onChange={(event: any) => setInput(event.target.value)} />
+    <div className={classNames('app', {}, [theme])}>
+      <Navbar />
+      <div className="content">
+        <AppRoutes />
+      </div>
     </div>
   );
 };
