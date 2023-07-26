@@ -1,0 +1,51 @@
+.Note {
+  width: 90%;
+  background-color: rgb(248, 201, 59);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.inpt {
+  height: 30px;
+}
+
+.delete {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.text {
+  height: 60%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  height: 30px;
+  width: 70px;
+  background: rgb(4, 206, 4);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.txtArea {
+  width: 90%;
+  padding: 3px;
+}
+
+.edit {
+  align-self: center;
+  margin-left: 5px;
+  cursor: pointer;
+}
