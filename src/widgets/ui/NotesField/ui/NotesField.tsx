@@ -17,7 +17,6 @@ export const NotesField = ({ className }: NotesFieldProps) => {
 
   const onShowModal = () => {
     setIsOpen(true);
-    console.log('click');
   };
 
   return (

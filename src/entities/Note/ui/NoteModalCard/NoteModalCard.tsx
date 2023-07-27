@@ -1,7 +1,6 @@
 import { StateSchema } from 'app/providers/storeProvider/StateSchema';
 import { noteSliceAction } from 'entities/Note/model/slice/noteSlice';
-import { type } from 'os';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/appDispatch';

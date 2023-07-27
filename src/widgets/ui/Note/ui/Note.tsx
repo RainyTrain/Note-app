@@ -39,22 +39,23 @@ export const Note = ({ className, text, name, hashtag }: NoteProps) => {
       <span className={cls.delete} onClick={deleteNote}>
         X
       </span>
-      <span className={cls.inpt}>{name}</span>
-      <div className={cls.text}>
-        <textarea
-          cols={10}
-          rows={10}
-          value={value}
-          className={cls.txtArea}
-          onChange={editText}
-          placeholder="Your text"
-          disabled={edit}
-        />
-        <span className={cls.edit} onClick={handleEditButton}>
-          Edit
-        </span>
-      </div>
-      <button className={cls.btn} onClick={submitChanges}>Save</button>
+      <input type="text" className={cls.inpt} placeholder="Name" value={name} disabled />
+      <textarea
+        cols={10}
+        rows={8}
+        value={value}
+        className={cls.txtArea}
+        onChange={editText}
+        placeholder="Your text"
+        disabled={edit}
+      />
+      <span className={cls.edit} onClick={handleEditButton}>
+        Edit
+      </span>
+      <span>{hashtag}</span>
+      <button className={cls.btn} onClick={submitChanges}>
+        Update!
+      </button>
     </div>
   );
 };
